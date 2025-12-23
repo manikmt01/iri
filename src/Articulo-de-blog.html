@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habitasse vel sed</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+
+    <!-- Articulo de blog start  -->
+    <section class="lg:py-24 py-12">
+      <div class="box-container">
+        <div class="max-w-[768px] mx-auto text-center">
+          <h4 class="text-Accent text-lg font-medium mb-3">Publicado 20 de enero de 2026</h4>
+          <h1 class="mb-6 font-semibold tracking-tight text-5xl">Habitasse vel sed</h1>
+          <p class="text-Dark text-lg">A blandit tristique massa in fermentum. Est felis egestas libero augue congue
+            vulputate risus mi. Nam ipsum pellentesque
+            dolor in nullam massa tempor ac eget. Pharetra sed accumsan facilisi.</p>
+        </div>
+        <div class="pt-6 pb-12 lg:pb-24 lg:pt-12">
+          <img src="./images/habit.png" alt="habit"
+            class="w-full sm:h-[640px] h-[378px] object-cover object-center rounded-3xl md:block hidden">
+          <img src="./images/habit-mobile.png" alt="habit"
+            class="w-full sm:h-[640px] h-[378px] object-cover object-center rounded-3xl md:hidden">
+        </div>
+        <div class="max-w-[720px] mx-auto">
+          <div class="flex flex-col gap-5">
+            <h4 class="font-medium text-[32px] leading-[36px] tracking-tight text-Black">Eget</h4>
+            <p class="text-lg text-Black">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse
+              morbi eleifend faucibus eget vestibulum felis.
+              Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae
+              nisi, tellus
+              tincidunt. At feugiat sapien varius id.</p>
+            <p class="text-lg text-Black">Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at
+              volutpat lectus velit, sed auctor. Porttitor
+              fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis
+              vel et quam
+              imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
+          </div>
+          <div class="py-6 lg:py-12">
+            <img src="./images/Blog-image.png" alt="habit"
+              class="w-full h-[230px] md:h-[480px] object-cover object-center rounded-3xl">
+          </div>
+          <div class="flex flex-col gap-5">
+            <p class="text-lg text-Black">Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non
+              pellentesque congue eget consectetur
+              turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut
+              tortor tellus.
+              Sed vel, congue felis elit erat nam nibh orci.</p>
+            <p class="text-lg text-Black">Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl
+              vitae. In aliquet pellentesque aenean hac
+              vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.</p>
+            <p class="text-lg text-Black">Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo
+              consectetur convallis risus. Sed condimentum
+              enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat
+              vulputate
+              posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque
+              ultricies eu
+              vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.</p>
+            <p class="text-lg text-Black">Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non
+              pellentesque congue eget consectetur
+              turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut
+              tortor tellus.
+              Sed vel, congue felis elit erat nam nibh orci.</p>
+          </div>
+          <div class="flex flex-col gap-5 mt-8">
+            <h4 class="font-medium text-[32px] leading-[36px] tracking-tight text-Black">Adipiscing</h4>
+            <p class="text-lg text-Black">Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse
+              morbi eleifend faucibus eget vestibulum felis.
+              Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae
+              nisi, tellus
+              tincidunt. At feugiat sapien varius id.</p>
+            <p class="text-lg text-Black">Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at
+              volutpat lectus velit, sed auctor. Porttitor
+              fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis
+              vel et quam
+              imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
+          </div>
+
+          <div class="flex flex-col gap-5 mt-8 border-b border-Light">
+            <h4 class="font-medium text-[32px] leading-[36px] tracking-tight text-Black">Enim leo cursus</h4>
+            <p class="text-lg text-Black">Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis
+              sit lorem nunc nunc sit. Eget diam
+              curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam
+              dui eget
+              fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate
+              hac elementum
+              gravida cursus dis.</p>
+            <ul class="list-decimal text-Black text-lg pl-8 py-6">
+              <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
+              <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.
+              </li>
+              <li> Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
+            </ul>
+            <p class="text-lg text-Black">Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis
+              sit lorem nunc nunc sit. Eget diam
+              curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam
+              dui eget
+              fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate
+              hac elementum
+              gravida cursus dis.</p>
+            <p class="text-lg text-Black">Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis
+              sit lorem nunc nunc sit. Eget diam
+              curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam
+              dui eget
+              fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate
+              hac elementum
+              gravida cursus dis.</p>
+          </div>
+          <div class="mt-6">
+            <ul class="flex flex-row gap-3 items-center">
+              <li>
+                <a href="" class="flex flex-row gap-2 items-center py-2.5 px-3.5 border-Medium border rounded-lg">
+                  <img src="./images/copy.svg" alt="copy">
+                  <span>Copy link</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex flex-row gap-2 items-center p-3 border-Medium border rounded-lg">
+                  <img src="./images/facebook-blog.svg" alt="facebook">
+
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex flex-row gap-2 items-center p-3 border-Medium border rounded-lg">
+                  <img src="./images/x-blog.svg" alt="x">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Articulo de blog end -->
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

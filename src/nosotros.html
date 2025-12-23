@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+    <!-- Nosotros start  -->
+    <section class="md:py-24 py-12">
+      <div class="box-container grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="col-span-1 flex flex-col md:gap-12 gap-9">
+          <h1
+            class="md:text-[120px] text-[56px] md:leading-[120px] leading-[56px] tracking-tighter text-Black font-medium">
+            Nosotros</h1>
+          <p class="text-Dark text-base">Somos el respaldo de confianza entre la comunidad médica y el paciente. Nuestro
+            gabinete
+            de Imagen y Radiología se
+            compone de cálido talento médico y de atención al paciente que en coordinación con la comunidad médica, la
+            innovación
+            tecnológica y espíritu de servicio, contribuimos día a día al bienestar integral de cada uno de nuestros
+            pacientes.</p>
+        </div>
+        <div class="col-span-1">
+          <img src="./images/nosotros.png" alt="nosotros" class="rounded-3xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestra razón de ser start  -->
+    <section class="md:py-24 py-12">
+      <div class="box-container grid grid-cols-1 xl:grid-cols-12 gap-6">
+        <div class="xl:col-span-5 flex flex-col gap-5 max-w-[430px]">
+          <h2 class="lg:text-7xl text-5xl tracking-tighter text-Black font-medium ">
+            Nuestra razón de ser</h2>
+          <p class="text-Dark text-base">La atención a detalle, espíritu de servicio, empatía y experiencia nos permiten
+            llevar a cabo diagnósticos precisos,
+            certeros y seguros en beneficio del paciente.</p>
+        </div>
+        <div class="xl:col-span-7">
+          <div class="grid grid-cols-1 lg:grid-cols-7 gap-3 md:gap-6">
+            <div class="h-full flex flex-row lg:flex-col justify-between gap-3 lg:gap-6 lg:col-span-3">
+              <div class="flex flex-col gap-6 p-[18px] lg:p-6 rounded-3xl bg-Light">
+                <h4 class="text-Black font-medium text-[32px] tracking-tight]">Misión</h4>
+                <p class="text-Dark text-base">Contribuir positivamente a la salud integral del paciente a través de un
+                  servicio empático y de confianza, manteniendo
+                  siempre nuestro compromiso de calidad con el sector médico.</p>
+              </div>
+              <div class="flex flex-col gap-6 p-[18px] lg:p-6 rounded-3xl bg-Light">
+                <h4 class="text-Black font-medium text-[32px] tracking-tight]">Visión</h4>
+                <p class="text-Dark text-base">Ser la empresa líder de imagenología, contribuyendo positivamente a la
+                  salud integral del paciente, manteniendo nuestro
+                  compromiso de calidad con la comunidad médica y brindando apoyo social a las comunidades de nuestra
+                  zona para su
+                  bienestar.</p>
+              </div>
+            </div>
+            <!-- another item start  -->
+            <div class=" lg:col-span-4 h-full bg-Light gap-6 rounded-3xl px-6 pt-6 flex flex-col ">
+              <h4 class="text-Black font-medium text-[32px] tracking-tight]">Valores</h4>
+              <div class="">
+                <ul class="flex flex-wrap flex-row gap-[18px]">
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Trabajo
+                      en
+                      equipo</a></li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Empatía</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Calidad</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Innovación</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Confianza</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Ética</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Análisis</a>
+                  </li>
+                  <li><a href=""
+                      class="border border-Accent px-6 py-2 text-Black font-medium text-xl rounded-full inline-block">Eficiencia</a>
+                  </li>
+                </ul>
+                <div class="-mr-6">
+                  <img src="./images/valores-bg.svg" alt="valores-bg" class="ml-auto md:w-auto w-[200px] md:mt-0 mt-2">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Nuestra razón de ser end -->
+    <!-- Por qué somos tu gabinete de bienestar start  -->
+    <section class="md:py-24 py-12">
+      <div class="box-container flex flex-col gap-9 md:gap-16">
+        <div class="max-w-[768px]">
+          <h2 class="lg:text-7xl text-5xl tracking-tighter text-Black font-medium ">
+            Por qué somos tu gabinete de bienestar</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16">
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/confianza.svg" alt="confianza">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Confianza y seguridad médica</h4>
+              <p class="text-Black text-lg">Somos la alternativa de confianza, seguridad y certeza de los pacientes y
+                médicos.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/tecnologia.svg" alt="tecnologia">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Tecnología de última generación</h4>
+              <p class="text-Black text-lg">Contamos con equipamiento de vanguardia y en constante innovación
+                tecnológica.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/atencion.svg" alt="atencion">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Atención con calidez y experiencia</h4>
+              <p class="text-Black text-lg">Nuestra atención al detalle, espíritu de servicio, empatía y experiencia nos
+                distinguen.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/responsabilidad.svg" alt="responsabilidad">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Responsabilidad social y compromiso local</h4>
+              <p class="text-Black text-lg">Socialmente responsable con las comunidades de la zona para contribuir al
+                mejoramiento de su bienestar.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/comprometidos.svg" alt="comprometidos">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Comprometidos con la excelencia</h4>
+              <p class="text-Black text-lg">Nos comprometemos en mejorar la calidad y el servicio hacia nuestros
+                pacientes.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/espacios.svg" alt="confianza">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Espacios cómodos y acogedores</h4>
+              <p class="text-Black text-lg">Cálidas y cómodas instalaciones para contribuir a un ambiente positivo y
+                agradable para el paciente.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/apoyo.svg" alt="apoyo">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Apoyo integral para médicos y pacientes</h4>
+              <p class="text-Black text-lg">Apoyamos al médico en su interpretación diagnóstica y al paciente en su
+                entendimiento para el mejoramiento de su
+                bienestar.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item start  -->
+          <div class="flex flex-row items-start gap-4">
+            <div class="min-w-12">
+              <img src="./images/resultados.svg" alt="resultados">
+            </div>
+            <div class="flex flex-col gap-1">
+              <h4 class="text-Black font-medium text-xl">Resultados rápidos y accesibles</h4>
+              <p class="text-Black text-lg">Contamos con diversa formas de entrega de resultados para la comodidad del
+                paciente: Correo electrónico o entrega
+                inmediata.</p>
+            </div>
+          </div>
+          <!-- single item end -->
+        </div>
+      </div>
+    </section>
+    <!-- Por qué somos tu gabinete de bienestar end -->
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

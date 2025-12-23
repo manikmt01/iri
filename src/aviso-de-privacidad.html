@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso de Privacidad</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+    <!-- Aviso de privacidad start  -->
+
+    <section class="py-12 lg:py-24">
+      <div class="box-container">
+        <div class="text-center bg-Light rounded-3xl p-6">
+          <div class="max-w-[768px] mx-auto">
+            <p class="text-sm text-Dark mb-3">Última actualización: 29 de octubre de 2018</p>
+            <h1 class="font-medium text-7xl tracking-tighter mb-6">Aviso de Privacidad</h1>
+            <p class="text-lg text-Black mb-5">La privacidad y seguridad de tu información personal es muy importante
+              para
+              nosotros. De conformidad con lo dispuesto
+              por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP - La "Ley")
+              y
+              su
+              Reglamento (el "Reglamento"), les informamos a todos nuestros clientes, proveedores o cualquier otra
+              persona
+              física, el
+              presente Aviso de Privacidad.</p>
+            <p class="text-lg text-Black">Si nos proporcionas Datos daremos por entendido que estás de acuerdo con los
+              términos de este Aviso, las finalidades del
+              tratamiento de tus Datos, así como los medios y procedimientos que ponemos a tu disposición para ejercer
+              tus
+              derechos de
+              acceso, rectificación, cancelación y oposición se encuentran en este Aviso de Privacidad.</p>
+          </div>
+        </div>
+        <!-- text item start  -->
+        <div class="flex flex-col gap-10 max-w-[720px] mx-auto mt-16 lg:mt-20">
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">I. IDENTIDAD Y DOMICILIO DEL RESPONSABLE</h4>
+            <p class="text-lg text-Dark">El Responsable del tratamiento de tus datos es Imagen Radiológica Integral S.
+              A. de C.V. con domicilio en Calle Santa
+              María #3152 Col. Gabilondo Tijuana, B.C; y Santos Degollado Sur #736 Col. Obispado Monterrey, Nuevo León.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">II. DATOS PERSONALES SOMETIDOS A TRATAMIENTO</h4>
+            <p class="text-lg text-Dark">Podemos obtener tus datos directamente cuando acudes a alguna de nuestras
+              oficinas o sucursales, o bien a través de la
+              página de internet, redes sociales, correo electrónico, teléfono, WhatsApp, mensajes de texto, mensajes
+              instantáneos,
+              por medio de nuestro Soporte Técnico, y en general, cualquier medio electrónico o a través de fuentes
+              permitidas por
+              ley. Los datos personales recabados y/o a recabarse serán, según corresponda:
+            </p>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">DATOS DE IDENTIFICACIÓN</h4>
+            <p class="text-lg text-Dark">nombre, nacionalidad, fecha y lugar de nacimiento, edad, sexo, estado civil,
+              Registro Federal de Contribuyentes (RFC),
+              Clave Única de Registro de Población (CURP), teléfono particular, teléfono celular y/o correo electrónico
+              personal.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              DATOS ACADÉMICOS
+            </h4>
+            <p class="text-lg text-Dark">
+              trayectoria educativa, títulos, cédula profesional, entre otros.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              DATOS LABORALES
+            </h4>
+            <p class="text-lg text-Dark">
+              cargo, domicilio de trabajo, teléfono, correo electrónico de trabajo, referencias laborales y/o
+              personales.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              DATOS PATRIMONIALES
+            </h4>
+            <p class="text-lg text-Dark">
+              cuentas bancarias y/o formas de pago.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              DATOS PARA EXPEDIENTES CLÍNICOS
+            </h4>
+
+            <ol class="list-[lower-roman] list-inside text-lg text-Dark">
+              <li>
+                Para la correcta prestación de los servicios médicos-hospitalarios, incluyendo sin
+                limitación hospitalización, cirugía, estudios, diagnósticos, atención de enfermería,
+                servicios farmacéuticos, servicios de banco de sangre, hemodiálisis, tratamientos
+                oncológicos, análisis de laboratorio, radiología e imagen, estudios y análisis
+                patológicos, terapia, rehabilitación, dieta y nutrición, y demás fines relacionados
+                con servicios de salud.
+              </li>
+              <li>
+                Para la creación del expediente clínico del Titular de los datos, así como su estudio,
+                análisis, actualización y conservación.
+              </li>
+              <li>
+                Para realizar la facturación y cobranza correspondiente de los servicios prestados.
+              </li>
+              <li>
+                Para la realización de estudios, registros, estadísticas y análisis de información
+                de salud.
+              </li>
+              <li>
+                Para la conservación de registros para seguimiento de los servicios, prestación de
+                servicios en el futuro y en general para dar seguimiento a cualquier relación
+                contractual que se haya generado entre el Titular de los datos y por otro lado
+                Imagen Radiológica Integral S. A. de C.V. para realizar diversos análisis estadísticos
+                y de mercado.
+              </li>
+              <li>
+                Para promoción y mercadeo de productos y servicios de Imagen Radiológica Integral
+                S. A. de C.V. u otras empresas pertenecientes al mismo grupo corporativo.
+              </li>
+            </ol>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">
+              DATOS PARA EXPEDIENTES CLÍNICOS
+            </h4>
+            <ol type="i" class="list-[lower-roman] list-inside text-lg text-Dark">
+              <li>Ofrecer la información sobre nuestros productos y/o servicios.</li>
+              <li>Contratar y dar seguimiento a las solicitudes de informes y dudas de los estudios, productos y/o
+                servicios.
+                Brindar el servicio y los productos solicitados.</li>
+              <li>Comunicar las promociones, paquetes, descuentos e información general sobre nuestros servicios y/o
+                productos.</li>
+              <li>Atender solicitudes y quejas.</li>
+              <li>Evaluar la calidad de nuestro servicio.</li>
+              <li>Para fines comerciales.</li>
+              <li>Para fines fiscales y/o de facturación.</li>
+              <li>Para mejorar nuestro contenido de sitio web y notificarte sobre actualizaciones al mismo.</li>
+              <li>Para mantener resguardos físicos, electrónicos y de procedimiento.</li>
+              <li>Invitaciones a eventos especiales.</li>
+              <li>Realizar investigaciones de mercado, informes estadísticos, estudios de marketing, así como
+                evaluaciones y
+                encuestas relacionadas con la prestación de los productos y/o servicios por parte de Imagen Radiológica
+                Integral,
+                S.A. de C.V.</li>
+            </ol>
+            <p class="text-lg text-Dark">Sus datos personales podrán ser utilizados para ponerse en contacto con usted y
+              dar seguimiento a la contratación de
+              nuestros productos y/o servicios, promociones (productos y/o servicios nuevos) a través de correo
+              electrónico y/o
+              cualquier otro medio electrónico o de comunicación, así como para fines administrativos y cumplir con
+              cualquier
+              obligación legal, así como para defender o entablar una demanda, reclamación, queja o trámite ante alguna
+              autoridad.</p>
+            <p class="text-lg text-Dark">En caso de que celebremos contigo un acto relacionado con alguno de nuestros
+              servicios o productos, tus datos serán
+              utilizados para el cumplimiento de las obligaciones derivadas de esa relación jurídica. En caso de no
+              concretarse
+              ninguna relación jurídica los datos que nos hayas proporcionado serán bloqueados y posteriormente
+              eliminados. La
+              información que haya sido bloqueada podrá conservarse por el plazo necesario que cumpla con las
+              disposiciones legales y
+              posteriormente será suprimida.</p>
+            <p class="text-lg text-Dark">Únicamente el personal autorizado de Imagen Radiológica Integral S.A. de C.V.
+              que ha cumplido y observado los
+              correspondientes requisitos de confidencialidad, podrá participar en el tratamiento de tus datos
+              personales. El personal
+              autorizado tiene prohibido permitir el acceso de personas no autorizadas y utilizar tus datos personales
+              para fines
+              distintos a los establecidos en el presente Aviso de Privacidad. La obligación de confidencialidad de las
+              personas que
+              participan en el tratamiento de tus datos personales subsiste aún después de terminada su relación con
+              Imagen
+              Radiológica Integral S.A. de C.V.</p>
+            <p class="text-lg text-Dark">Imagen Radiológica Integral S.A. de C.V. actuará como responsable de la base de
+              datos en la que se encontrará tu
+              información, implementará las medidas de seguridad, técnicas, administrativas y físicas necesarias para
+              proteger tus
+              datos personales y evitar daño, pérdida, alteración, destrucción o el uso, acceso o tratamiento no
+              autorizado.</p>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              Previsiones especiales para el tratamiento de datos personales de menores y personas con incapacidades o
+              en estado de
+              interdicción
+            </h4>
+            <p class="text-lg text-Dark">
+              Imagen Radiológica Integral, S.A. de C.V., cuidará con especial interés la información personal de menores
+              de edad,
+              personas en estado de interdicción y personas con capacidades diferentes en términos que la ley establece,
+              a través de
+              las siguientes medidas:
+            </p>
+            <ol class="list-disc text-lg text-Dark pl-10">
+              <li>Los datos serán obtenidos con el consentimiento de los padres y/o tutores.
+              </li>
+              <li>La verificación de la identidad del padre y/o tutor se realizará de manera directa en las
+                instalaciones de Imagen
+                Radiológica Integral, S.A. de C.V.</li>
+            </ol>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-0">
+            <h4 class="text-xl font-medium">
+              IV. CONSENTIMIENTO
+            </h4>
+            <p class="text-lg text-Dark">
+              Cuando sea aplicable, si no manifiestas tu oposición para que tus datos sean tratados en los términos
+              señalados en el
+              presente Aviso, se entenderá que has otorgado tu consentimiento para ello.
+            </p>
+            <p class="text-lg text-Dark">
+              El envío que usted realice de sus datos personales a través de la página de internet de Imagen Radiológica
+              Integral,
+              S.A. de C.V., se entenderá como su consentimiento para que sus datos personales sean transferidos conforme
+              a lo señalado
+              en el presente Aviso de Privacidad.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">
+              V. COOKIES
+            </h4>
+            <p class="text-lg text-Dark">
+              El usuario y el visitante del sitio web de www.imagenradiologica.com. Conoce y acepta. Imagen Radiológica
+              Integral S.A.
+              de C.V. podrá utilizar un sistema de seguimiento mediante la utilización de cookies (las "Cookies"). Las
+              Cookies son
+              pequeños archivos que se instalan en el disco rígido, con una duración limitada en el tiempo que ayudan a
+              personalizar
+              los servicios. También ofrecemos ciertas funcionalidades que sólo están disponibles mediante el empleo de
+              Cookies. Las
+              Cookies se utilizan con el fin de conocer los intereses, el comportamiento y la demografía de quienes
+              visitan o son
+              usuarios de nuestro Sitio Web y de esa forma, comprender mejor sus necesidades e intereses y darles un
+              mejor servicio o
+              proveerle información relacionada. También usaremos la información obtenida por intermedio de las Cookies
+              para analizar
+              las páginas navegadas por el visitante o usuario, las búsquedas realizadas, mejorar nuestras iniciativas
+              comerciales y
+              promocionales, mostrar publicidad o promociones, banners de interés, noticias sobre Imagen Radiológica
+              Integral S.A. de
+               C.V. perfeccionar nuestra oferta de contenidos y artículos, personalizar dichos contenidos, presentación
+              y servicios;
+              también podremos utilizar Cookies para promover y hacer cumplir las reglas y seguridad del sitio.
+              www.imagenradiologica.com podrá agregar Cookies en los e-mails que envíe para medir la efectividad de las
+              promociones.
+            </p>
+            <p class="text-lg text-Dark">
+              Utilizamos adicionalmente las Cookies para que el usuario no tenga que introducir su clave tan
+              frecuentemente durante
+              una sesión de navegación, también para contabilizar y corroborar las inscripciones, la actividad del
+              usuario y otros
+              conceptos, siempre teniendo como objetivo de la instalación de las Cookies, el beneficio del usuario que
+              la recibe, y no
+              será usado con otros fines Imagen Radiológica Integral S.A. de C.V.
+            </p>
+            <p class="text-lg text-Dark">
+              Se establece que la instalación, permanencia y existencia de las Cookies en el computador del usuario
+              depende de su
+              exclusiva voluntad y puede ser eliminada de su computador cuando el usuario así lo desee. Para saber cómo
+              quitar las
+              Cookies del sistema es necesario revisar la sección Ayuda (Help) del navegador.
+            </p>
+            <p class="text-lg text-Dark">
+              Adicionalmente, se pueden encontrar Cookies u otros sistemas similares instalados por terceros en ciertas
+              páginas de
+              nuestro sitio web. Por ejemplo, al navegar por una página creada por un usuario, puede que exista una
+              Cookie emplazada
+              en tal página.
+            </p>
+            <p class="text-lg text-Dark">
+              Se aclara expresamente que este Aviso de Privacidad cubre la utilización de Cookies por este sitio y no la
+              utilización
+              de Cookies por parte de anunciantes. Nosotros no controlamos el uso de Cookies por terceros.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">
+              VI. TRANSFERENCIA DE DATOS PERSONALES
+            </h4>
+            <div class="">
+              <p class="text-lg text-Dark">
+                Con fundamento a lo establecido en los Artículos 36 y 37 de la Ley, los datos pueden ser trasferidos
+                lícitamente para
+                las finalidades establecidas en el presente Aviso de Privacidad, incluyendo, pero sin limitar a:
+              </p>
+              <ol class="list-[lower-roman] list-inside text-lg text-Dark">
+                <li>
+                  Nuestras subsidiarias, filiales, afiliadas y/o controladoras dentro del territorio
+                  nacional o en el extranjero;
+                </li>
+                <li>
+                  Encargados en materia de atención de clientes, estudios y despachos de cobranza
+                  relacionados con la prestación de nuestros servicios y/o productos;
+                </li>
+                <li>
+                  Terceros como agencias de publicidad que participen con nosotros con el fin de
+                  brindarte nuestros servicios y/o productos, o aquellas empresas que presten
+                  servicios a Imagen Radiológica Integral, S.A. de C.V., con la única finalidad de que
+                  los terceros puedan prestar los servicios y/o productos, o canalizar la solicitud
+                  de información o trámite de compra que se requiera a Imagen Radiológica Integral,
+                  S.A. de C.V.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">
+              VII. ACTUALIZACIÓN Y/O MODIFICACIÓN AL AVISO DE PRIVACIDAD
+            </h4>
+            <p class="text-lg text-Dark">
+              Imagen Radiológica Integral S.A. de C.V. se reserva el derecho de actualizar y/o modificar los términos
+              del presente
+              Aviso de Privacidad en cualquier momento, en cuyo caso, comunicará dicha situación mediante un correo
+              electrónico a la
+              dirección que nos hayas proporcionado, o mediante cualquier medio de comunicación que Imagen Radiológica
+              Integral S.A.
+              de C.V. estime adecuado.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div class="flex flex-col gap-5">
+            <h4 class="text-xl font-medium">
+              VIII. MEDIOS PARA EJERCER LOS DERECHOS DE ACCESO, RECTIFICACIÓN, CANCELACIÓN U OPOSICIÓN
+            </h4>
+            <p class="text-lg text-Dark">
+              Imagen Radiológica Integral S.A. de C.V. cuenta con los recursos técnicos, materiales y humanos necesarios
+              para asegurar
+              que los datos personales del usuario serán tratados en estricto apego a la Ley. En cualquier momento, el
+              Usuario tendrá
+              el derecho a solicitar a Imagen Radiológica Integral S.A. de C.V., el ejercicio de los derechos que le
+              confiere la Ley,
+              mediante el envío de la solicitud correspondiente por escrito al siguiente correo electrónico
+              <a href="mailto:arco@imagenradiologica.com" class="hover:text-Accent">arco@imagenradiologica.com</a>. O
+              <a href=" https://www.imagenradiologica.com/arco" target="_blank"
+                class="text-Accent sm:text-lg text-sm">https://www.imagenradiologica.com/arco</a>. Queda entendido que
+              para que Imagen
+              Radiológica
+              Integral S.A. de C.V. pueda atender correcta y oportunamente cualquiera de las solicitudes a las que se
+              refiere esta
+              sección, la solicitud del titular deberá contener como mínimo: Nombre completo del titular, Número de
+              teléfono fijo o
+              celular, Correo electrónico, Descripción sucinta del objeto de la solicitud, y Razones que motivan su
+              solicitud. Nuestra
+              respuesta a su solicitud será enviada dentro del plazo permitido por la Ley al correo electrónico del
+              remitente de la
+              misma. El usuario reconoce y acepta que una de las finalidades del tratamiento de sus datos personales es
+              cumplir con
+              sus obligaciones contractuales y/o comerciales que mantiene y/o mantendrá con Imagen Radiológica Integral
+              S.A. de C.V.
+              por lo que no podrá cancelar y/u oponerse al tratamiento de datos personales que puedan y/o pudieran
+              afectar y/o
+              restringir el cumplimento de las mismas.
+            </p>
+          </div>
+          <!-- single item end  -->
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

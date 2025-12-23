@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alianzas</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+    <!-- Alianzas start  -->
+    <section class="py-12 md:py-24">
+      <div class="box-container">
+        <div class="text-center max-w-[1024px] mx-auto">
+          <h4 class="text-Accent text-sm md:text-base mb-1.5  max-w-[768px] mx-auto">Dado que cada póliza y convenio es
+            diferente,
+            por favor, contacta a
+            tu
+            aseguradora para validar tu proceso de cobertura
+            antes de agendar tu cita.</h4>
+          <h1 class="text-Black font-semibold text-5xl md:text-6xl tracking-tight mb-6">Nuestras Alianzas Estratégicas:
+            Acceso y
+            Confianza
+            para su Salud.</h1>
+          <p class="text-lg to-Dark max-w-[768px] mx-auto">En IRI, trabajamos con aseguradoras y hospitales líderes para
+            garantizar que
+            recibas un diagnóstico o más accesible con
+            la máxima cobertura.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-24">
+      <div class="box-container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-7 flex flex-col gap-9 lg:text-start text-center">
+            <h1 class="text-Black font-semibold text-5xl md:text-6xl tracking-tight mb-6 max-w-[595px]">Aceptamos una
+              amplia variedad
+              de seguros nacionales</h1>
+            <ul class="gap-6 flex flex-row items-center flex-wrap lg:justify-start justify-center">
+              <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+              <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+              <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+              <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="bg-Light p-6 rounded-3xl flex flex-col gap-6">
+              <p class="text-Dark text-lg text-center">Para que tu experiencia sea fluida, te pedimos:</p>
+              <div class="flex flex-col gap-[18px]">
+                <!-- single item start  -->
+                <div class="p-[18px] rounded-3xl bg-White flex flex-row gap-4">
+                  <div
+                    class="min-w-12 h-12 rounded-full bg-Accent flex items-center justify-center text-White text-lg font-medium">
+                    01
+                  </div>
+                  <div class="flex gap-1 flex-col">
+                    <h4 class="text-Black text-lg font-medium">Consulta</h4>
+                    <p class="text-Dark">Comunícate con tu aseguradora o agente de seguros para verifi car si tu póliza
+                      cubre el estudio
+                      solicitado y cuál es el
+                      porcentaje de deducible o coaseguro aplicable.</p>
+                  </div>
+                </div>
+                <!-- single item end -->
+
+                <!-- single item start  -->
+                <div class="p-[18px] rounded-3xl bg-White flex flex-row gap-4">
+                  <div
+                    class="min-w-12 h-12 rounded-full bg-Accent flex items-center justify-center text-White text-lg font-medium">
+                    02
+                  </div>
+                  <div class="flex gap-1 flex-col">
+                    <h4 class="text-Black text-lg font-medium">Autorización</h4>
+                    <p class="text-Dark">Solicita los documentos o claves de autorización necesarios que debas presentar
+                      en IRI.</p>
+                  </div>
+                </div>
+                <!-- single item end -->
+                <!-- single item start  -->
+                <div class="p-[18px] rounded-3xl bg-White flex flex-row gap-4">
+                  <div
+                    class="min-w-12 h-12 rounded-full bg-Accent flex items-center justify-center text-White text-lg font-medium">
+                    03
+                  </div>
+                  <div class="flex gap-1 flex-col">
+                    <h4 class="text-Black text-lg font-medium">Agenda</h4>
+                    <p class="text-Dark">Agenda tu estudio online en nuestra web y trae contigo la documentación
+                      requerida.</p>
+                  </div>
+                </div>
+                <!-- single item end -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-24">
+      <div class="box-container bg-Light p-8 rounded-3xl">
+        <div class="max-w-[778px] mx-auto flex flex-col gap-9 text-center ">
+          <h4 class="text-xl font-medium text-Black">Colaboramos con diversos hospitales y redes médicas para extender
+            nuestros servicios de diagnóstico de alta precisión a
+            más pacientes</h4>
+          <ul class="gap-6 flex flex-row items-center flex-wrap justify-center">
+            <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+            <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+            <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+            <li><img src="./images/logo.png" alt="logo" class="w-[89px]"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Preguntas start  -->
+    <section class="py-12 lg:py-24">
+      <div class="box-container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h1 class="font-medium text-5xl lg:text-start text-center lg:text-7xl tracking-tighter">Preguntas <br>
+              frecuentes</h1>
+          </div>
+          <div class="">
+            <div id="faq" class="flex flex-col gap-8 max-w-[576px] lg:ml-auto">
+
+              <!-- ITEM (OPEN BY DEFAULT) -->
+              <div class="faq-item">
+                <button
+                  class="faq-btn flex w-full items-start justify-between text-left font-medium text-base gap-2 md:text-xl text-Black cursor-pointer">
+                  <span>¿IRI realiza la autorización de mi seguro?</span>
+                  <span class="icon mt-1"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z"
+                        stroke="#AC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="faq-content grid transition-all duration-300 ease-in-out" style="grid-template-rows:1fr">
+                  <div class="overflow-hidden py-1">
+                    <p class="text-Dark text-lg">
+                      No. Debido a la confidencialidad de tu póliza, el paciente debe contactar
+                      directamente a su aseguradora para obtener la autorización, el formato de
+                      ingreso y las indicaciones del proceso.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item">
+                <button
+                  class="faq-btn flex w-full items-start justify-between text-left font-medium text-base gap-2 md:text-xl text-Black cursor-pointer">
+                  <span>¿Puedo agendar online si usaré mi seguro?</span>
+                  <span class="icon mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                        stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </span>
+                </button>
+
+                <div class="faq-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                  <div class="overflow-hidden py-1">
+                    <p class="text-Dark text-lg">
+                      Sí, puedes agendar en línea, pero deberás presentar la autorización el día de tu cita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="faq-item">
+                <button
+                  class="faq-btn flex w-full items-start justify-between text-left font-medium text-base gap-2 md:text-xl text-Black cursor-pointer">
+                  <span>¿Qué documentos necesito llevar el día de mi cita?</span>
+                  <span class="icon mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                        stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </span>
+                </button>
+
+                <div class="faq-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                  <div class="overflow-hidden py-1">
+                    <p class="text-Dark text-lg">
+                      Identificación oficial, orden médica, autorización del seguro y comprobante de afiliación.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- ITEM -->
+              <div class="faq-item">
+                <button
+                  class="faq-btn flex w-full items-start justify-between text-left font-medium text-base gap-2 md:text-xl text-Black cursor-pointer">
+                  <span>¿Qué pasa si mi seguro solo cubre una parte del estudio?</span>
+                  <span class="icon mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                        stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </span>
+                </button>
+
+                <div class="faq-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                  <div class="overflow-hidden py-1">
+                    <p class="text-Dark text-lg">
+                      Identificación oficial, orden médica, autorización del seguro y comprobante de afiliación.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- ITEM -->
+              <div class="faq-item">
+                <button
+                  class="faq-btn flex w-full items-start justify-between text-left font-medium text-base gap-2 md:text-xl text-Black cursor-pointer">
+                  <span>¿Los precios de las promociones aplican con mi seguro?</span>
+                  <span class="icon mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                        stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </span>
+                </button>
+
+                <div class="faq-content grid grid-rows-[0fr] transition-all duration-300 ease-in-out">
+                  <div class="overflow-hidden py-1">
+                    <p class="text-Dark text-lg">
+                      Identificación oficial, orden médica, autorización del seguro y comprobante de afiliación.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Listo para Agendar? start  -->
+
+    <section class="py-12 md:py-24">
+      <div class="box-container">
+        <div class="bg-Light rounded-3xl grid grid-cols-1 lg:grid-cols-2">
+          <div class="p-6 md:p-16 flex flex-col gap-5 text-center lg:text-start">
+            <h2 class="font-medium text-5xl lg:text-7xl tracking-tighter text-Black">¿Listo para Agendar?</h2>
+            <p class="text-lg font-normal text-Dark">Dolor neque nisi at risus cursus pulvinar eget. Non sed fermentum
+              sit euismod.</p>
+            <ul class="flex flex-col sm:flex-row gap-3 mt-3">
+              <li>
+                <a href=""
+                  class="flex flex-row gap-2.5 text-Accent border border-Accent text-lg font-medium rounded-full px-4 py-3 justify-center">
+                  <img src="./images/facebook-red.svg" alt="facebook">
+                  <span>Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href=""
+                  class="flex flex-row gap-2.5 text-Accent border border-Accent text-lg font-medium rounded-full px-4 py-3 justify-center">
+                  <img src="./images/telephone-red.svg" alt="telephone">
+                  <span>Telefono</span>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  class="flex flex-row gap-2.5 text-Accent border border-Accent text-lg font-medium rounded-full px-4 py-3 justify-center">
+                  <img src="./images/instagram-red.svg" alt="instagram">
+                  <span>Instagram</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="w-full h-full">
+            <img src="./images/listo.png" alt="listo"
+              class="w-full h-full object-cover object-center lg:rounded-r-3xl lg:rounded-l-none rounded-l-3xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aceptamos todas las tarjetas de crédito y débito start  -->
+    <section class="py-12 md:py-24">
+      <div class="box-container space-y-8 text-center">
+        <div class="space-y-5">
+          <h3 class="text-Black text-[32px] leading-9 tracking-tight">Aceptamos todas las tarjetas de crédito y débito
+          </h3>
+          <p class="text-lg text-Dark">Pregunta por nuestras opciones de Meses sin Intereses.</p>
+        </div>
+        <ul class="flex flex-row flex-wrap gap-6 justify-center">
+          <li><a href=""><img src="./images/visa.svg" alt="visa"></a></li>
+          <li><a href=""><img src="./images/master-card.png" alt="master-card"></a></li>
+          <li><a href=""><img src="./images/cripto.png" alt="cripto"></a></li>
+          <li><a href=""><img src="./images/wallet.png" alt="wallate"></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Aceptamos todas las tarjetas de crédito y débito end -->
+
+
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+  <script>
+    const items = document.querySelectorAll('.faq-item');
+
+    items.forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.icon');
+
+      btn.addEventListener('click', () => {
+        const isOpen = content.style.gridTemplateRows === '1fr';
+
+        // close all
+        items.forEach(i => {
+          i.querySelector('.faq-content').style.gridTemplateRows = '0fr';
+          i.querySelector('.icon').innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+        });
+
+        // open current if closed
+        if (!isOpen) {
+          content.style.gridTemplateRows = '1fr';
+          icon.innerHTML = `<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#AC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta de tus resultados</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+    <!-- Consulta tus resultados end -->
+    <section class="md:mb-24 mb-12">
+      <div class="box-container">
+        <div class="relative">
+          <div class="relative">
+            <img src="./images/consulta-de.png" alt="consulta de" class="md:block hidden">
+            <img src="./images/consulta-de-mobile.png" alt="consulta de" class="md:hidden">
+            <!-- search bar  -->
+            <div
+              class="flex flex-col gap-3 max-w-full w-[calc(100%-12px)] sm:w-[calc(100%-24px)] md:w-[250px] p-3 bg-[#FEFEFD]/50 rounded-3xl absolute right-1.5 sm:right-3 md:top-auto sm:top-3 top-1.5 md:bottom-[110px]  lg:bottom-[183px] h-fit">
+              <div class="relative">
+                <input type="search" name="clav" id="clave"
+                  class="w-full py-2.5 pl-3.5 pr-9 bg-White border border-Medium rounded-full placeholder:text-Medium text-lg outline-Accent"
+                  placeholder="Clave de estudio">
+                <button class="absolute right-1 top-1/2 -translate-y-1/2 p-3 cursor-pointer "><img
+                    src="./images/search.svg" alt="search"></button>
+              </div>
+              <p class="text-sm md:text-White text-Dark">Ver ejemplo</p>
+            </div>
+            <!-- title  -->
+            <div
+              class="absolute xs:right-[4%] right-0 xxs:right-[1%] sm:right-4 xl:right-[52px] md:max-w-[290px] sm:max-w-[340px] max-w-[230px] lg:max-w-[390px]  xl:max-w-[475px] flex bottom-0 xl:-bottom-2">
+              <h1
+                class="md:text-5xl text-5xl sm:text-7xl xl:text-[72px] font-medium xl:leading-[84px] tracking-tighter">
+                Consulta de
+                tus
+                resultados
+              </h1>
+            </div>
+            <!-- list  -->
+
+          </div>
+          <ul
+            class="flex flex-col gap-3 max-w-full lg:w-[332px] p-3 bg-[#FEFEFD]/50 rounded-3xl lg:absolute lg:left-4 lg:bottom-4 lg:mt-0 mt-6">
+            <!-- single item start  -->
+            <li>
+              <a href=""
+                class="flex flex-row justify-between items-start bg-Light lg:bg-White rounded-3xl py-4 pl-2 pr-6 hover:bg-white/50 hover:backdrop:backdrop-blur-3xl transition-all ease-in-out duration-300 md:gap-4 gap-1.5">
+                <div class="flex flex-row gap-2.5 items-center">
+                  <div class="flex w-10 h-10 justify-center items-center bg-Light rounded-full">
+                    <img src="./images/area.svg" alt="area">
+                  </div>
+                  <div class="text-Black font-medium text-lg w-full max-w-[225px]">
+                    <div class="">Área médica </div>
+                    <div class="text-Dark text-base">Comunicarse con su ejecutiva si no cuenta con su acceso.</div>
+                  </div>
+                </div>
+                <div class="text-Black font-medium text-lg mt-4">
+                  <img src="./images/arrow-black.svg" alt="arrow">
+                </div>
+              </a>
+            </li>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <li>
+              <a href=""
+                class="flex flex-row justify-between items-start bg-Light lg:bg-White rounded-3xl py-4 pl-2 pr-6 hover:bg-white/50 hover:backdrop:backdrop-blur-3xl transition-all ease-in-out duration-300 md:gap-4 gap-1.5">
+                <div class="flex flex-row gap-2.5 items-center">
+                  <div class="flex w-10 h-10 justify-center items-center bg-Light rounded-full">
+                    <img src="./images/instituciones.svg" alt="instituciones">
+                  </div>
+                  <div class="text-Black font-medium text-lg w-full max-w-[225px]">
+                    <div class="">Instituciones </div>
+                    <div class="text-Dark text-base">Relación de pacientes, médicos y estudios.</div>
+                  </div>
+                </div>
+                <div class="text-Black font-medium text-lg mt-4">
+                  <img src="./images/arrow-black.svg" alt="arrow">
+                </div>
+              </a>
+            </li>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <li>
+              <a href=""
+                class="flex flex-row justify-between items-start bg-Light lg:bg-White rounded-3xl py-4 pl-2 pr-6 hover:bg-white/50 hover:backdrop:backdrop-blur-3xl transition-all ease-in-out duration-300 md:gap-4 gap-1.5">
+                <div class="flex flex-row gap-2.5 items-center">
+                  <div class="flex w-10 h-10 justify-center items-center bg-Light rounded-full">
+                    <img src="./images/directorio.svg" alt="directorio">
+                  </div>
+                  <div class="text-Black font-medium text-lg w-full max-w-[225px]">
+                    <div class="">Área de pacientes</div>
+                    <div class="text-Dark text-base">Relación de estudios, citas y reportes.</div>
+                  </div>
+                </div>
+                <div class="text-Black font-medium text-lg mt-4">
+                  <img src="./images/arrow-black.svg" alt="arrow">
+                </div>
+              </a>
+            </li>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <li>
+              <a href=""
+                class="flex flex-row justify-between items-start bg-Light lg:bg-White rounded-3xl py-4 pl-2 pr-6 hover:bg-white/50 hover:backdrop:backdrop-blur-3xl transition-all ease-in-out duration-300 md:gap-4 gap-1.5">
+                <div class="flex flex-row gap-2.5 items-center">
+                  <div class="flex w-10 h-10 justify-center items-center bg-Light rounded-full">
+                    <img src="./images/consulta.svg" alt="consulta">
+                  </div>
+                  <div class="text-Black font-medium text-lg w-full max-w-[225px]">
+                    <div class="">Facturación</div>
+                    <div class="text-Dark text-base">Solicitud de factura.</div>
+                  </div>
+                </div>
+                <div class="text-Black font-medium text-lg mt-4">
+                  <img src="./images/arrow-black.svg" alt="arrow">
+                </div>
+              </a>
+            </li>
+            <!-- single item end  -->
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Consulta tus resultados start  -->
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

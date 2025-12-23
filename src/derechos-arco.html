@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derechos ARCO</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- custom font  -->
+  <link rel="stylesheet" href="./switzer-font/css/style.css">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+  <!-- swiper css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl py-3">
+    <div class="box-container">
+      <div class="flex h-16 items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2 text-Black text-lg">
+          <a href="#">
+            <img src="./images/logo.png" alt="IRI Logo" class="w-28 sm:w-[134px]" />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+          <ul class="flex flex-row items-center gap-6">
+            <li> <a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+                Facturación
+              </a></li>
+          </ul>
+
+
+
+
+
+
+
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <ul class="md:hidden flex flex-row items-center gap-2.5">
+          <li>
+            <a href="#"
+              class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
+              Facturación
+            </a>
+          </li>
+          <li>
+            <button id="menuBtn"
+              class="items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none">
+              <img src="./images/menu.svg" alt="menu">
+            </button>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- OFFCANVAS for mobile -->
+  <div class="">
+    <!-- OFFCANVAS OVERLAY -->
+    <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/50"></div>
+
+    <!-- OFFCANVAS MENU -->
+    <aside id="offcanvas"
+      class="fixed right-0 top-0 z-50 h-full w-full translate-x-full bg-white shadow-xl transition-transform duration-300">
+
+      <!-- Offcanvas Header -->
+      <div class="flex items-center justify-between border-b px-4 py-4">
+        <span>
+          <img src="./images/logo.png" alt="logo" class="w-20">
+        </span>
+        <button id="closeBtn" class="text-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Offcanvas Nav -->
+      <nav class="flex px-4 pt-8">
+        <ul class="flex flex-col items-center gap-6 w-full justify-start">
+          <li> <a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Nosotros</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Estudios</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Vacantes</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Blog</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-lg leading-6 hover:text-Accent transition-all ease-in-out duration-300 px-2 py-1">Contacto</a>
+          </li>
+          <li class="w-full text-center"><a href="#"
+              class="font-medium text-lg leading-6 transition-all ease-in-out duration-300 px-4 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent block w-full">
+              Facturación
+            </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+
+  <main>
+    <section class="py-12 lg:py-24">
+      <div class="box-container grid grid-cols-1 lg:grid-cols-2 lg:gap-4 gap-8">
+        <div class="col-span-1">
+          <form class="space-y-5 lg:max-w-[540px]">
+            <!-- Radio Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+              <!-- User Type -->
+              <div>
+                <p class="text-Black text-lg mb-3">¿Usted es?</p>
+                <div class="space-y-[18px]">
+
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="userType" checked class="accent-Accent w-4 h-4">
+                    Cliente
+                  </label>
+
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="userType" class="accent-Accent w-4 h-4">
+                    Proveedor
+                  </label>
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="userType" class="accent-Accent w-4 h-4">
+                    Empleado
+                  </label>
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="userType" class="accent-Accent w-4 h-4">
+                    Otro
+                  </label>
+                </div>
+
+                <input type="text" placeholder="Escribe"
+                  class="mt-2 w-full rounded-full border border-Medium focus:ring-1 focus:ring-Accent outline-none text-Black placeholder:text-Medium text-lg py-2.5 px-3.5" />
+              </div>
+
+              <!-- Rights -->
+              <div>
+                <p class="text-Black text-lg mb-3">Derecho a ejercer</p>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="rightType" checked class="accent-Accent w-4 h-4">
+                    Acceder
+                  </label>
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="rightType" class="accent-Accent w-4 h-4">
+                    Rectificar
+                  </label>
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="rightType" class="accent-Accent w-4 h-4">
+                    Cancelar
+                  </label>
+                  <label class="flex items-center gap-2 text-Black text-lg">
+                    <input type="radio" name="rightType" class="accent-Accent w-4 h-4">
+                    Oposición
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Name + RFC -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="text-Black text-lg mb-1.5 block">Nombre</label>
+                <input type="text" placeholder="Nombre"
+                  class="w-full rounded-full border border-Medium focus:ring-1 focus:ring-Accent outline-none text-Black placeholder:text-Medium text-lg py-2.5 px-3.5" />
+              </div>
+
+              <div>
+                <label class="text-Black text-lg mb-1.5 block">RFC</label>
+                <input type="text" placeholder="ABC 680524 P-76"
+                  class="w-full rounded-full border border-Medium focus:ring-1 focus:ring-Accent outline-none text-Black placeholder:text-Medium text-lg py-2.5 px-3.5" />
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div>
+              <label class="text-Black text-lg mb-1.5 block">
+                Información a la que desee ejercer un Derecho ARCO
+              </label>
+              <textarea rows="4" placeholder="Escribe algo"
+                class=" w-full rounded-xl border border-Medium focus:ring-1 focus:ring-Accent outline-none text-Black placeholder:text-Medium text-lg py-2.5 px-3.5"></textarea>
+            </div>
+
+            <!-- Upload -->
+            <!-- Upload Area -->
+            <div id="uploadArea"
+              class="rounded-xl p-4 text-center cursor-pointer transition hover:border-Accent bg-Light">
+
+              <!-- Placeholder -->
+              <div id="uploadPlaceholder" class="flex flex-col items-center">
+                <img src="./images/upload.svg" alt="upload">
+                <p class="text-Accent font-medium text-lg mt-3 mb-1">Haz clic para subir</p>
+                <p class="text-lg text-Dark mb-1">or drag and drop para archivos que desee adjuntar</p>
+                <p class="text-xs text-Medium">
+                  SVG, PNG, JPG o GIF (max. 800x400px)
+                </p>
+              </div>
+
+              <!-- Image Preview -->
+              <div id="previewWrapper" class="hidden mt-4">
+                <img id="previewImage" class="mx-auto rounded-lg max-h-[220px] object-contain" alt="Image preview" />
+              </div>
+
+              <!-- File Input -->
+              <input id="fileInput" type="file" accept="image/*" class="hidden" />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+              class="w-full bg-Accent hover:bg-red-800 text-white py-[18px] rounded-full font-semibold text-lg transition mt-1">
+              Enviar
+            </button>
+
+            <!-- Footer Note -->
+            <p class="text-sm text-Dark text-center">
+              Su solicitud se procesará en las siguientes 24 horas hábiles, posteriormente recibirá un correo
+              electrónico con la
+              factura solicitada al email proporcionado vía formulario.
+            </p>
+
+          </form>
+        </div>
+        <!-- right item start  -->
+        <div class="col-span-1 space-y-[18px]">
+          <div class="bg-Light md:px-6 md:py-[34px] p-6 rounded-3xl">
+            <p class="text-Accent text-base sm:text-lg font-medium">Para mas información, dudas o comentarios puedes
+              contáctarnos a
+              cualquiera de nuestras sucursales</p>
+          </div>
+          <!-- item start  -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
+            <!-- single item start  -->
+            <div class="bg-Accent rounded-3xl gap-4 flex flex-col justify-between md:min-h-[748px] p-6">
+              <div class="">
+                <h4 class="font-medium text-[32px] tracking-tight text-White">Monterrey</h4>
+              </div>
+              <div class="">
+                <ul class="gap-3 flex flex-col">
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/location.svg" alt="location" class="mt-1">
+                    <span>Santos Degollado Sur 736 Col. Obispado <br> Monterrey, Nuevo León</span>
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-center">
+                    <img src="./images/call.svg" alt="location" class="mt-1">
+                    <a href="tel:+52 (81) 833-345-24">+52 (81) 833-345-24</a>
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/time.svg" alt="time" class="mt-1">
+                    <div class="w-full">
+                      <div class="flex flex-row justify-between gap-1">
+                        <span>Lunes a Viernes</span>
+                        <span>8am - 8pm </span>
+                      </div>
+                      <div class="flex flex-row justify-between gap-1">
+                        <span>Sábado</span>
+                        <span>8am - 3pm </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- single item end  -->
+
+            <!-- single item start  -->
+            <div class="bg-[#28280F] rounded-3xl gap-4 flex flex-col justify-between md:min-h-[748px] p-6">
+              <div class="">
+                <h4 class="font-medium text-[32px] tracking-tight text-White">Tijuana</h4>
+              </div>
+              <div class="">
+                <ul class="gap-3 flex flex-col">
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/location.svg" alt="location" class="mt-1">
+                    <span>
+                      <span class="font-medium text-lg block">Sucursal Gabilondo</span>
+                      <span>Calle Santa María 3152 Col. Gabilondo <br> entre Gobernador Lugo y Gobernador Rico <br> C.P.
+                        22044 Tijuana, B.C.</span>
+                    </span>
+
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/call.svg" alt="location" class="mt-1">
+                    <div class="">
+                      <a href="tel:+ 52 (664) 97-10-940">+ 52 (664) 97-10-940 al 42</a>
+                      <a href="tel:(619) 30-88-311">(619) 30-88-311 USA</a>
+                    </div>
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/time.svg" alt="time" class="mt-1">
+                    <div class="w-full">
+                      <div class="flex flex-row justify-between gap-1">
+                        <span>Lunes a Viernes</span>
+                        <span>8am - 8pm</span>
+                      </div>
+                      <div class="flex flex-row justify-between gap-1">
+                        <span>Sábado</span>
+                        <span>8am - 5pm</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="gap-3 flex flex-col pt-12 mt-12 border-t border-Light">
+                  <li class="flex flex-row gap-2 text-Light text-base items-start">
+                    <img src="./images/location.svg" alt="location" class="mt-1">
+                    <span>
+                      <span class="font-medium text-lg block">Sucursal Cruz Roja</span>
+                      <span>Alfonso Gamboa s/n esq. Enrique Silvestre <br> Tijuana, B.C.</span>
+                    </span>
+
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-center">
+                    <img src="./images/call.svg" alt="location" class="mt-1">
+                    <a href="tel:(664) 62-20-054">(664) 62-20-054</a>
+                  </li>
+
+                  <li class="flex flex-row gap-2 text-Light text-base items-center">
+                    <img src="./images/time.svg" alt="time" class="mt-1">
+                    <div class="w-full">
+                      <div class="flex flex-row justify-between gap-1">
+                        <span>24 hrs</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+            <!-- single item end  -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+
+  <footer
+    class="bg-[#F6F6F4] rounded-[40px] md:pt-24 md:pb-12 py-9 md:bg-[url(../images/footer-shadow-logo.svg)] bg-[url(../images/footer-shadow-logo-mobile.svg)] bg-no-repeat bg-bottom-right bg-size-[auto]">
+    <div class="box-container grid grid-cols-2 md:grid-cols-12 gap-x-3 gap-y-6">
+
+      <!-- Column 1: Logo & Legal -->
+      <div class="md:space-y-9 space-y-4 col-span-2 md:col-span-4">
+        <img src="./images/logo.png" alt="IRI Logo" class="w-[133px]">
+
+        <p class=" text-Black">
+          Permiso de publicidad No. <br> 223300201A1551
+        </p>
+
+        <p class="text-sm text-Black leading-5">
+          © 2025 Imagen Radiológica Integral S.A. de <br> C.V. Todos los derechos reservados.
+        </p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Nosotros</a></li>
+          <li><a href="#" class="hover:text-Accent">Estudios</a></li>
+          <li><a href="#" class="hover:text-Accent">Consulta tus resultados</a></li>
+          <li><a href="#" class="hover:text-Accent">Área médica</a></li>
+          <li><a href="#" class="hover:text-Accent">Ubícanos</a></li>
+          <li><a href="#" class="hover:text-Accent">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Extras -->
+      <div class="md:col-span-3 col-span-1">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Alianzas</a></li>
+          <li><a href="#" class="hover:text-Accent">Campaña del mes</a></li>
+          <li><a href="#" class="hover:text-Accent">Agendar citas</a></li>
+          <li><a href="#" class="hover:text-Accent">Blog</a></li>
+          <li><a href="#" class="hover:text-Accent">SOE</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div class="md:flex md:flex-col grid grid-cols-2 justify-between gap-6 col-span-2">
+        <ul class="space-y-3 text-sm md:text-base text-Black font-DM">
+          <li><a href="#" class="hover:text-Accent">Derechos ARCO</a></li>
+          <li><a href="#" class="hover:text-Accent">Aviso de privacidad</a></li>
+          <li><a href="#" class="hover:text-Accent">Política de cookies</a></li>
+          <li><a href="#" class="hover:text-Accent">Términos y condiciones</a></li>
+        </ul>
+        <!-- Social Icons -->
+
+        <ul
+          class="flex md:flex-row flex-col md:items-center gap-4 md:gap-6 md:justify-center justify-start text-sm md:text-base text-Black font-DM">
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/facebook-footer.svg" alt="facebook" class="md:w-auto w-6">
+              <span class="md:hidden inline">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/x.svg" alt="x" class="md:w-auto w-6">
+              <span class="md:hidden inline">X (Twitter)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:scale-110 transition-all ease-in-out duration-300 flex items-center gap-2">
+              <img src="./images/email.svg" alt="email" class="md:w-auto w-6">
+              <span class="md:hidden inline">E-mail</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+  <!-- JavaScript -->
+  <script>
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const previewImage = document.getElementById('previewImage');
+    const previewWrapper = document.getElementById('previewWrapper');
+    const placeholder = document.getElementById('uploadPlaceholder');
+
+    uploadArea.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', handleFile);
+
+    function handleFile() {
+      const file = fileInput.files[0];
+      if (!file || !file.type.startsWith('image/')) return;
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        previewImage.src = reader.result;
+        previewWrapper.classList.remove('hidden');
+        placeholder.classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Drag & Drop Support
+    uploadArea.addEventListener('dragover', e => {
+      e.preventDefault();
+      uploadArea.classList.add('border-Accent');
+    });
+
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('border-Accent');
+    });
+
+    uploadArea.addEventListener('drop', e => {
+      e.preventDefault();
+      uploadArea.classList.remove('border-Accent');
+      fileInput.files = e.dataTransfer.files;
+      handleFile();
+    });
+  </script>
+</body>
+
+</html>
