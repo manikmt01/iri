@@ -73,7 +73,7 @@
           <li>
             <a href="#"
               class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
-              Facturación
+              Agenda tu cita
             </a>
           </li>
           <li>
@@ -154,9 +154,9 @@
             <img src="./images/hero-mobile.png" alt="hero" class="mx-auto lg:hidden w-full">
             <!-- ================= CONTENT ================= -->
             <div
-              class="mx-auto max-w-[1280px] lg:px-8 px-1.5  flex flex-col-reverse lg:flex-row 3xl:gap-[72px] absolute sm:bottom-4 bottom-[1%] 3xl:left-[calc(50%-660px)] lg:left-[calc(50%-525px)] sm:left-2 left-1 3xl:items-start lg:items-end lg:gap-0 sm:gap-9 gap-[22px]">
+              class="mx-auto max-w-[1280px] lg:px-8 px-1.5  flex flex-col-reverse lg:flex-row xl:gap-[72px] absolute sm:bottom-4 bottom-[1%] xl:left-[calc(50%-640px)] sm:left-2 left-1 3xl:items-start lg:items-end lg:gap-0 sm:gap-9 gap-[22px]">
               <h1
-                class="3xl:text-[120px] text-5xl md:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:max-w-[602px] max-w-[400px] md:max-w-[530px]">
+                class="3xl:text-[120px] text-5xl md:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:w-[580px] xl:w-[575px] md:w-[485px] md:max-w-full  max-w-[400px]">
                 Resonancia magnética
               </h1>
               <ul class="flex flex-col gap-3 max-w-full w-[277px] sm:w-[332px] p-2 sm:p-3 bg-[#FEFEFD]/50 rounded-3xl">
@@ -237,6 +237,7 @@
               </ul>
             </div>
           </div>
+
           <!-- ================= SLIDE  ================= -->
           <div class="swiper-slide relative lg:pb-0 sm:pb-10 pb-14">
             <!-- show only desktop version  -->
@@ -245,11 +246,11 @@
             <img src="./images/hero-mobile.png" alt="hero" class="mx-auto lg:hidden w-full">
             <!-- ================= CONTENT ================= -->
             <div
-              class="mx-auto max-w-[1280px] lg:px-8 px-1.5  flex flex-col-reverse lg:flex-row 3xl:gap-[72px] absolute sm:bottom-4 bottom-[1%] 3xl:left-[calc(50%-660px)] lg:left-[calc(50%-525px)] sm:left-2 left-1 3xl:items-start lg:items-end lg:gap-0 sm:gap-9 gap-[22px]">
-              <h1
-                class="3xl:text-[120px] text-5xl md:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:max-w-[602px] max-w-[400px] md:max-w-[530px]">
-                Resonancia magnética
-              </h1>
+              class="mx-auto max-w-[1280px] lg:px-8 px-1.5  flex flex-col-reverse lg:flex-row xl:gap-[72px] absolute sm:bottom-4 bottom-[1%] xl:left-[calc(50%-640px)] sm:left-2 left-1 3xl:items-start lg:items-end lg:gap-0 sm:gap-9 gap-[22px]">
+              <h2
+                class="3xl:text-[120px] text-5xl md:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:w-[580px] xl:w-[575px] md:w-[485px] md:max-w-full  max-w-[400px]">
+                New Text <br> magnética
+              </h2>
               <ul class="flex flex-col gap-3 max-w-full w-[277px] sm:w-[332px] p-2 sm:p-3 bg-[#FEFEFD]/50 rounded-3xl">
                 <!-- single item start  -->
                 <li>
@@ -375,7 +376,7 @@
         <!-- show only desktop view  -->
         <div class="xl:grid grid-cols-12 gap-6 hidden">
           <!-- single item start  -->
-          <div class="col-span-6 flex flex-col gap-6 p-6">
+          <div class="col-span-6 flex flex-col gap-6 py-6">
             <h2 class="font-medium text-7xl tracking-tighter text-Black">Estudios</h2>
             <p class="text-lg leading-[26px] text-Dark max-w-[543px]">En nuestro centro encontrarás una amplia variedad
               de estudios de
@@ -602,12 +603,12 @@
               <!-- Slide Card start-->
               <div class="swiper-slide">
                 <!-- single item start -->
-                <div class="rounded-3xl bg-[#F5F5F5]">
+                <div class="rounded-3xl bg-[#F5F5F5] flex flex-col h-full">
                   <div class="">
-                    <img src="./images/resonancia.png" alt="resonancia"
+                    <img src="./images/irm-mobile.png" alt="resonancia"
                       class="w-full h-[160px] object-cover object-center rounded-t-3xl">
                   </div>
-                  <div class="py-8 px-6 rounded-b-3xl flex flex-col gap-[34px]">
+                  <div class="py-8 px-6 rounded-b-3xl flex flex-col gap-[34px] h-full justify-between">
                     <div class="flex flex-col gap-6">
                       <h4 class="font-medium text-[32px] leading-9 tracking-tight text-Black">Resonancia magnética (IRM)
                       </h4>
@@ -1309,20 +1310,23 @@
   </script>
   <script>
     new Swiper(".heroSwiper", {
+
       loop: true,
       speed: 1200,
       navigation: {
         nextEl: ".hero-next",
         prevEl: ".hero-prev",
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: true,
+      // },
     });
   </script>
   <script>
     new Swiper('.mySwiper', {
+      loop: true,
+      speed: 1200,
       slidesPerView: 1.2,
       spaceBetween: 12,
       breakpoints: {

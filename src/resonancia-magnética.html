@@ -73,7 +73,7 @@
           <li>
             <a href="#"
               class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
-              Facturación
+              Agenda tu cita
             </a>
           </li>
           <li>
@@ -170,7 +170,7 @@
       <div class="box-container">
 
         <div
-          class="md:bg-[url(../images/resonancia-desktop.png)] bg-[url(../images/resonancia-mobile.png)] sm:bg-size-[100%_100%] bg-size-[100%] md:min-h-[926px] bg-no-repeat sm:min-h-[1510px] xs:min-h-[1140px] min-h-[1074px] flex flex-col justify-between">
+          class="md:bg-[url(../images/resonancia-desktop.png)] bg-[url(../images/resonancia-mobile.png)] sm:bg-size-[100%_100%] bg-size-[100%] md:min-h-[926px] bg-no-repeat sm:min-h-[1510px] xs:min-h-[1140px] mxs:min-h-[1100px] min-h-[1074px] flex flex-col justify-between">
           <div class="flex flex-row justify-between items-start sm:pt-3">
             <div
               class="xl:max-w-[576px] lg:max-w-[460px] md:max-w-[340px] sm:max-w-[340px] xxs:max-w-[250px] max-w-[240px]  xl:mt-0 lg:-mt-8 md:-mt-[140px] flex flex-col gap-6 -mt-4">
@@ -229,7 +229,7 @@
     </section>
 
     <!-- ¿Para qué se utiliza la Resonancia Magnética (IRM)? end -->
-    <section class="py-12 md:py-24 xl:pl-0 md:pl-8 pl-4">
+    <section class="py-12 md:py-24 xl:pl-0 md:pr-8 pr-4 md:pl-8 pl-4">
       <div class="3xl:ml-[calc(50%-610px)] xl:ml-[calc(50%-610px)]">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -300,6 +300,9 @@
     <!-- Preparación de estudios start  -->
     <section class="py-12 md:py-24">
       <div class="box-container xl:!p-0 relative flex flex-col xl:gap-0 gap-7">
+        <div class="mb-9">
+          <h2 class="text-5xl md:text-7xl font-medium text-Black">Preparación de estudios</h2>
+        </div>
         <div
           class="xl:bg-transparent xl:bg-[url(../images/pre-desktop.png)] bg-size-[100%] bg-no-repeat bg-top-left bg-Light px-5 py-7 rounded-3xl grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-6">
           <!-- single item start  -->
@@ -747,27 +750,28 @@
   <script src="./js/index.js"></script>
   <script>
     new Swiper('.mySwiper', {
-      slidesPerView: 1.2,
+      loop: true,
+      slidesPerView: 1,
       spaceBetween: 24,
       breakpoints: {
         768: {
-          slidesPerView: 2.3,
+          slidesPerView: 2,
           spaceBetween: 18,
         },
         1024: {
-          slidesPerView: 3.3,
+          slidesPerView: 3,
           spaceBetween: 18,
         },
         1280: {
-          slidesPerView: 3.3,
+          slidesPerView: 3,
           spaceBetween: 18,
         },
         1440: {
-          slidesPerView: 3.3,
+          slidesPerView: 3,
           spaceBetween: 18,
         },
         1536: {
-          slidesPerView: 4.29,
+          slidesPerView: 4,
           spaceBetween: 18,
         }
       }

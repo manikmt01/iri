@@ -73,7 +73,7 @@
           <li>
             <a href="#"
               class="font-medium text-base leading-6 transition-all ease-in-out duration-300 px-3 py-3 border border-transparent hover:border-Accent bg-Accent rounded-full text-white hover:bg-transparent hover:text-Accent">
-              Facturación
+              Agenda tu cita
             </a>
           </li>
           <li>
@@ -146,7 +146,7 @@
       <img src="./images/Contacto-mobile.png" alt="img" class="mx-auto md:hidden w-full">
       <div class="absolute bottom-[6%] 3xl:left-[calc(50%-660px)] xl:left-[calc(50%-525px)] lg:left-8 left-4">
         <h1
-          class="3xl:text-[120px] text-5xl sm:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:max-w-[602px] max-w-[400px] md:max-w-[530px]">
+          class="3xl:text-[120px] xxs:text-[56px] text-5xl sm:text-7xl xl:text-8xl font-medium 3xl:leading-[120px] tracking-tighter 3xl:max-w-[602px] max-w-[400px] md:max-w-[530px]">
           Contacto</h1>
       </div>
     </section>
@@ -238,30 +238,48 @@
           </div>
           <!-- item start  -->
           <div class="relative w-full h-full flex flex-col gap-[18px] min-h-[500px]">
-            <div
-              class="md:absolute right-4 bottom-4 bg-White p-2 md:max-w-[315px]  rounded-3xl flex flex-col gap-[18px] z-40">
-              <!-- Item -->
-              <div class="flex flex-col gap-2 p-[18px] rounded-3xl bg-Light">
-                <h4 class="font-medium text-xl text-Black cursor-pointer">
-                  Monterrey
-                </h4>
-                <p class="text-Dark text-sm">Santos Degollado Sur 736 Col. Obispado Monterrey, Nuevo León</p>
-              </div>
 
-              <!-- Item -->
-              <div class="flex flex-col gap-2 p-[18px] rounded-3xl">
-                <h4 class="font-medium text-xl text-Black cursor-pointer">
+            <!-- Tabs -->
+            <div
+              class="md:absolute right-4 bottom-4 bg-White p-2 md:max-w-[315px] rounded-3xl flex flex-col gap-[18px] z-40">
+
+              <!-- Monterrey -->
+              <button class="flex flex-col gap-2 p-[18px] rounded-3xl cursor-pointer text-start bg-Light active-tab"
+                id="monterrey">
+                <span class="font-medium text-xl text-Black">
+                  Monterrey
+                </span>
+                <span class="text-Dark text-sm">
+                  Santos Degollado Sur 736 Col. Obispado Monterrey, Nuevo León
+                </span>
+              </button>
+
+              <!-- Tijuana -->
+              <button class="flex flex-col gap-2 p-[18px] rounded-3xl cursor-pointer text-start bg-White" id="tijuana">
+                <span class="font-medium text-xl text-Black">
                   Tijuana
-                </h4>
-                <p class="text-Dark text-sm">Calle Santa María 3152 Col. Gabilondo entre Gobernador Lugo y Gobernador
-                  Rico C.P. 22044 Tijuana, B.C.</p>
-              </div>
+                </span>
+                <span class="text-Dark text-sm">
+                  Calle Santa María 3152 Col. Gabilondo entre Gobernador Lugo y Gobernador Rico C.P. 22044 Tijuana, B.C.
+                </span>
+              </button>
 
             </div>
+
+            <!-- Monterrey Map -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.0091146030964!2d-100.34031252460261!3d25.670992577409013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866295f10e4b0ebf%3A0x4fc305b69d174702!2sImagen%20Radiol%C3%B3gica%20Integral%20Monterrey!5e0!3m2!1sen!2sbd!4v1766218038443!5m2!1sen!2sbd"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              class="md:absolute top-0 left-0 w-full h-full rounded-3xl md:min-h-auto min-h-[500px]"></iframe>
+              class="md:absolute top-0 left-0 w-full h-full rounded-3xl md:min-h-auto min-h-[500px]" id="monterrey-map">
+            </iframe>
+
+            <!-- Tijuana Map -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.380105589052!2d-117.02129102434805!3d32.51599367377379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94838467ec159%3A0xd66874e4a2b025fe!2sImagen%20Radiol%C3%B3gica%20integral%20Tijuana!5e0!3m2!1sen!2sbd!4v1766928023391!5m2!1sen!2sbd"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              class="md:absolute top-0 left-0 w-full h-full rounded-3xl md:min-h-auto min-h-[500px] hidden-item"
+              id="tijuana-map">
+            </iframe>
 
           </div>
           <!-- item end -->
@@ -374,7 +392,7 @@
           </div>
           <div class="md:block hidden h-full">
             <img src="./images/form-image.png" alt="images"
-              class="w-full 4k:w-[99.5vh] 3xl:w-[83vh] 3xl:max-w-[83vh] xl:w-[77vh] xl:max-w-[77vh] 4k:max-w-[99.5vh] lg:h-full rounded-3xl object-cover object-center">
+              class="w-full lg:h-full rounded-3xl object-cover object-center">
           </div>
         </div>
       </div>
@@ -662,6 +680,28 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
   <script src="./js/index.js"></script>
+  <script>
+    const tabs = document.querySelectorAll("button[id]");
+    const maps = {
+      monterrey: document.getElementById("monterrey-map"),
+      tijuana: document.getElementById("tijuana-map"),
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // reset tabs
+        tabs.forEach(t => t.classList.remove("bg-Light"));
+        tabs.forEach(t => t.classList.add("bg-White"));
+        Object.values(maps).forEach(map => map.classList.add("hidden-item"));
+
+        // activate selected
+        tab.classList.add("bg-Light");
+        tab.classList.remove("bg-White");
+        const target = tab.id + "-map";
+        document.getElementById(target).classList.remove("hidden-item");
+      });
+    });
+  </script>
   <script>
     const input = document.querySelector("#phone");
     const iti = window.intlTelInput(input, {

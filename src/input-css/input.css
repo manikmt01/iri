@@ -6,6 +6,7 @@
 
   --breakpoint-2xxs: 360px;
   --breakpoint-xxs: 375px;
+  --breakpoint-mxs: 390px;
   --breakpoint-xs: 410px;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -58,4 +59,25 @@ body {
 .tab-panel.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+iframe {
+  transition: opacity 0.25s ease;
+}
+.hidden-item {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mySwiper .swiper-wrapper {
+  align-items: stretch; /* forces equal height */
+}
+
+.mySwiper .swiper-slide {
+  height: auto; /* allow content to define height */
+  display: flex;
+}
+
+.mySwiper .swiper-slide > * {
+  flex: 1; /* make inner card fill equally */
 }
