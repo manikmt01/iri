@@ -41,11 +41,11 @@ body {
   padding-left: 0.5rem;
 }
 .tab-btn {
-  @apply px-5 py-2 text-Black md:text-White rounded-t-xl text-lg transition-colors ease-in-out duration-300 min-w-[160px] border border-b-0 border-White/50 text-start cursor-pointer hover:bg-White/50 hover:border-transparent;
+  @apply md:px-5 px-4 py-2 text-Black xl:text-White rounded-t-xl md:text-xl text-base transition-colors ease-in-out duration-300 min-w-[160px] border border-b-0 border-White/50 text-start cursor-pointer hover:bg-White/50 hover:border-transparent;
 }
 
 .tab-btn.active {
-  @apply bg-Light md:bg-White/50 border-transparent;
+  @apply bg-Light xl:bg-White/50 border-transparent;
 }
 
 .tab-panel {
@@ -62,11 +62,10 @@ body {
 }
 
 iframe {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.5s ease;
 }
 .hidden-item {
-  opacity: 0;
-  pointer-events: none;
+  @apply opacity-0 pointer-events-none md:block hidden;
 }
 
 .mySwiper .swiper-wrapper {
@@ -80,4 +79,25 @@ iframe {
 
 .mySwiper .swiper-slide > * {
   flex: 1; /* make inner card fill equally */
+}
+
+@media (min-width: 430px) and (max-width: 440px) {
+  .mobilePosstion {
+    min-height: 1180px;
+  }
+}
+@media (min-width: 530px) and (max-width: 550px) {
+  .mobilePosstion {
+    min-height: 1400px;
+  }
+}
+@media (min-width: 365px) and (max-width: 374px) {
+  .mobilePosstion {
+    min-height: 1090px;
+  }
+}
+@media (min-width: 380px) and (max-width: 389px) {
+  .mobilePosstion {
+    min-height: 1090px;
+  }
 }
